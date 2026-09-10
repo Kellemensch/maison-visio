@@ -1,26 +1,144 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: white;
 }
+
+.status-screen,
+.parents-idle,
+.call-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parents-idle {
+  background: #111;
+}
+
+.parents-card {
+  text-align: center;
+}
+
+.parents-card h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.parents-card p {
+  font-size: 2rem;
+  color: #bbb;
+}
+
+.status-dot {
+  width: 20px;
+  height: 20px;
+  background: #35d07f;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+}
+
+.call-screen {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.call-card {
+  text-align: center;
+}
+
+.call-card h1 {
+  font-size: 3rem;
+}
+
+.call-button {
+  margin-top: 2rem;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: #16803a;
+  color: white;
+}
+
+.video-page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: black;
+}
+
+.room {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.remote-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.local-video {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  width: 220px;
+  height: 150px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid white;
+  background: black;
+}
+
+.video-local {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.waiting {
+  font-size: 2rem;
+  color: #aaa;
+}
+
+.hangup-button {
+  position: absolute;
+  z-index: 10;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  background: #d83232;
+  color: white;
+  cursor: pointer;
+}
+
