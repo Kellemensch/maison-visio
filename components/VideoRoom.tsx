@@ -128,12 +128,13 @@ export default function VideoRoom({
 			<div className="video-page">
 				<RoomView localIdentity={identity} />
 
-				<button
+				{identity != "parents" && <button
 					onClick={hangUp}
 					className="hangup-button"
 				>
 					Raccrocher
 				</button>
+				}
 			</div>
 		</RoomContext.Provider>
 	);

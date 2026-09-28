@@ -37,7 +37,7 @@ export default function ParentsPage() {
 
 		checkStatus();
 
-		const interval = setInterval(checkStatus, 2000);
+		const interval = setInterval(checkStatus, 10000);
 
 		return () => {
 			mounted = false;
@@ -57,7 +57,7 @@ export default function ParentsPage() {
 				<h1>Maison</h1>
 
 				<p>
-					En attente d'un appel...
+					En attente d&apos;un appel...
 				</p>
 
 				{error && (
